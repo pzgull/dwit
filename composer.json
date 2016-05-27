@@ -1,0 +1,16 @@
+{
+    "name": "quentin/dwit",
+    "authors": [
+        {
+            "name": "quengeorges",
+            "email": "quenting92@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Controller\\": "Controller/",
+            "Model\\": "Model/"
+        }
+    }
+}
