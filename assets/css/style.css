@@ -1,0 +1,50 @@
+/*HEADER*/
+header {
+    background: #263238;
+    box-shadow: 0 0 10px 0;
+    height: 80px;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    color: #eaeaea;
+    text-transform: uppercase;
+    font: 12px Lato;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4px;
+}
+
+header>nav>ul>li:first-child {
+    padding-top: 20px;
+}
+
+header nav ul li ul li a {
+    margin-left: 20px;
+}
+
+header>nav>ul>li:first-child a img {
+    height: 22px;
+    width: 22px;
+    display: block;
+    margin: 0 auto 5px;
+    transform: rotate(45deg);
+}
+
+header>nav>ul>li:nth-child(2) a img {
+    background: #263238;
+    padding: 10px;
+}
+
+header nav ul li ul li a img {
+    height: 22px;
+    width: 22px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+/*TYPOGRAPHIE*/
