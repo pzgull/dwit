@@ -11,13 +11,13 @@
 <header>
     <nav>
         <ul>
-            <li><a href=""><img src="../assets/img/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
-            <li><a href=""><img src="../assets/img/logo.png" alt="Logo de DWIT"></a></li>
+            <li><a href="#"><img src="../assets/img/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
+            <li><a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a></li>
             <li>
                 <ul>
-                    <li><a href=""><img src="../assets/img/magnifying-glass.svg" alt="Search">Search</a></li>
-                    <li><a href=""><img src="../assets/img/chat-2.svg" alt="Notifications">Notification</a></li>
-                    <li><a href=""><img src="../assets/img/avatar.svg" alt="Account">My account</a></li>
+                    <li><a href="#"><img src="../assets/img/magnifying-glass.svg" alt="Search">Search</a></li>
+                    <li><a href="#"><img src="../assets/img/chat-2.svg" alt="Notifications">Notification</a></li>
+                    <li><a href="#"><img src="../assets/img/avatar.svg" alt="Account">My account</a></li>
                 </ul>
             </li>
         </ul>

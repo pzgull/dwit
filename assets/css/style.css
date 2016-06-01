@@ -6,6 +6,7 @@ header {
     padding: 0 20px;
 }
 
+/*NAV*/
 header a {
     text-decoration: none;
     color: #eaeaea;
@@ -19,12 +20,9 @@ header nav ul {
     padding-top: 4px;
 }
 
+/*ADD A DWIT*/
 header>nav>ul>li:first-child {
     padding-top: 20px;
-}
-
-header nav ul li ul li a {
-    margin-left: 20px;
 }
 
 header>nav>ul>li:first-child a img {
@@ -35,12 +33,23 @@ header>nav>ul>li:first-child a img {
     transform: rotate(45deg);
 }
 
+/*LOGO*/
 header>nav>ul>li:nth-child(2) a img {
     background: #263238;
     padding: 10px;
 }
 
-header nav ul li ul li a img {
+/*RIGHT NAV*/
+header nav ul li ul li a {
+    margin-left: 20px;
+}
+
+header nav ul li ul li {
+    display: flex;
+    margin-top: 15px;
+}
+
+header nav ul li ul li a img{
     height: 22px;
     width: 22px;
     display: block;
