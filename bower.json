@@ -1,0 +1,23 @@
+{
+  "name": "DWIT",
+  "homepage": "https://github.com/quengeorges/dwit",
+  "authors": [
+    "ThomasGrandmagnac <thomasgrandmagnac@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Materialize": "materialize#^0.97.6"
+  }
+}

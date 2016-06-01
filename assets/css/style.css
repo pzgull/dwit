@@ -35,7 +35,6 @@ header>nav>ul>li:first-child a img {
 
 /*LOGO*/
 header>nav>ul>li:nth-child(2) a img {
-    background: #263238;
     padding: 10px;
 }
 
@@ -54,6 +53,72 @@ header nav ul li ul li a img{
     width: 22px;
     display: block;
     margin: 0 auto 5px;
+}
+
+/*SECTIONS*/
+section {
+    padding: 50px;
+}
+
+/*SECTION HOT CHALLENGE*/
+section.hot-challenge {
+    background: #e0e0e0;
+}
+
+section.hot-challenge .wrapper {
+    text-align: center;
+}
+
+
+section.hot-challenge h1 {
+    font: 30px Lato;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*ARTICLE*/
+section.hot-challenge article {
+    display: inline-block;
+    border: 1px solid black;
+    width: 358px;
+    height: 294px;
+    margin: 50px 20px;
+    box-shadow: 0 0 10px;
+}
+
+section.hot-challenge article h2 {
+    background: #37474f;
+    padding: 10px;
+    font: 14px Lato;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section.hot-challenge article h2 span {
+    color: #ffb300;
+}
+
+section.hot-challenge article ul {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.6);
+    position: relative;
+    top: -60px;
+    padding: 5px;
+    color: #e0e0e0;
+    font: 14px Lato;
+    text-transform: uppercase;
+}
+
+section.hot-challenge article ul li img {
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin: 10px auto 0;
 }
 
 /*TYPOGRAPHIE*/
