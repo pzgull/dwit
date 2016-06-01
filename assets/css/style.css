@@ -102,16 +102,20 @@ section.hot-challenge article h2 span {
     color: #ffb300;
 }
 
-section.hot-challenge article ul {
+section.hot-challenge article>ul {
     display: flex;
     justify-content: space-between;
     background: rgba(0,0,0,0.6);
     position: relative;
-    top: -60px;
+    top: -75px;
     padding: 5px;
     color: #e0e0e0;
     font: 14px Lato;
     text-transform: uppercase;
+}
+
+section.hot-challenge article ul li:nth-child(2) {
+    margin: 0;
 }
 
 section.hot-challenge article ul li img {
@@ -119,6 +123,14 @@ section.hot-challenge article ul li img {
     width: 20px;
     display: block;
     margin: 10px auto 0;
+}
+
+section.hot-challenge article ul li ul {
+    display: flex;
+}
+
+section.hot-challenge article ul li ul li {
+    margin-right: 15px;
 }
 
 /*TYPOGRAPHIE*/

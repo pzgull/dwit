@@ -29,35 +29,39 @@
     <article>
         <h2>Subway bag <span>challenge</span></h2>
         <img src="../assets/img/image1.png" alt="Image 1">
+        <h3>Author : Jean Bon</h3>
         <ul>
-            <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-            <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+            <li>
+                <ul>
+                    <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
+                    <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+                </ul>
+            </li>
             <li>Musical<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
             <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
         </ul>
-        <h3>Author : Jean Bon</h3>
     </article>
     <article>
         <h2>Kill shabat <span>challenge</span></h2>
-        <img src="../assets/img/image2.png" alt="Image 2">
+        <img src="../assets/img/image1.png" alt="Image 2">
+        <h3>Author : Jean Bon</h3>
         <ul>
             <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
             <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
             <li>Racial<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
             <li>666<img src="../assets/img/svg/heart.svg" alt="Like"></li>
         </ul>
-        <h3>Author : Jean Bon</h3>
     </article>
     <article>
         <h2>Yann's head <span>challenge</span></h2>
         <img src="../assets/img/image3.png" alt="Image 3">
+        <h3>Author : Jean Bon</h3>
         <ul>
             <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
             <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
             <li>Wtf !?<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
             <li>4<img src="../assets/img/svg/heart.svg" alt="Like"></li>
         </ul>
-        <h3>Author : Jean Bon</h3>
     </article>
     </div>
 </section>
