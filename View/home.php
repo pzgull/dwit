@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="diwit">
 <head>
     <meta charset="UTF-8">
     <title>DWIT</title>
@@ -23,15 +23,16 @@
             </ul>
         </nav>
     </header>
-    <section class="hot-challenge">
+    <section class="hot-challenge" ng-controller="ChallengeController">
         <h1>Hot Challenge</h1>
         <div class="wrapper">
-        <article>
-            <h2>Subway bag <span>challenge</span></h2>
-            <img src="../assets/img/image1.png" alt="Image 1">
+
+        <article ng-repeat="challenge in challenges">
+            <h2>{{ challenge.title }} <span>challenge</span></h2>
+            <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
             <div class="author-article">
-                <h3>Author : Jean Bon</h3>
-                <p>28/05/2016</p>
+                <h3>Author : {{ challenge.author }}</h3>
+                <p>{{ challenge.date }}</p>
             </div>
             <ul>
                 <li>
@@ -44,42 +45,7 @@
                 <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
             </ul>
         </article>
-        <article>
-            <h2>GIF <span>challenge</span></h2>
-            <img src="../assets/img/image2.gif" alt="Image 2">
-            <div class="author-article">
-                <h3>Author : Jean Bon</h3>
-                <p>29/05/2016</p>
-            </div>
-            <ul>
-                <li>
-                    <ul>
-                        <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                        <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
-                    </ul>
-                </li>
-                <li>Art<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
-            </ul>
-        </article>
-        <article>
-            <h2>Yann's head <span>challenge</span></h2>
-            <img src="../assets/img/image3.png" alt="Image 3">
-            <div class="author-article">
-                <h3>Author : Jean Bon</h3>
-                <p>30/05/2016</p>
-            </div>
-            <ul>
-                <li>
-                    <ul>
-                        <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                        <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
-                    </ul>
-                </li>
-                <li>Wtf!?<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
-            </ul>
-        </article>
+
         </div>
     </section>
     <!--End of Hot Challenge Section-->
@@ -119,6 +85,6 @@
     </section>
     <!--End of Add a DWIT Section-->
     <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
