@@ -81,8 +81,6 @@ section.hot-challenge .wrapper {
 /*ARTICLE*/
 section.hot-challenge article {
     display: inline-block;
-    width: 358px;
-    height: 294px;
     margin: 50px 20px;
 }
 
@@ -98,7 +96,8 @@ section.hot-challenge article h2 {
 }
 
 section.hot-challenge article>img {
-    width: 100%;
+    width: 360px;
+    height: 300px;
     box-shadow: 0 0 10px;
     margin-bottom: 10px;
 }
