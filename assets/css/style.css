@@ -1,0 +1,228 @@
+/* SVG ICOFONT */
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?gq1vkx');
+    src:    url('../fonts/icomoon.eot?gq1vkx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?gq1vkx') format('truetype'),
+    url('../fonts/icomoon.woff?gq1vkx') format('woff'),
+    url('../fonts/icomoon.svg?gq1vkx#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-headphones:before {
+    content: "\e90e";
+}
+.icon-cancel:before {
+    content: "\e900";
+}
+.icon-art:before {
+    content: "\e901";
+}
+.icon-avatar:before {
+    content: "\e902";
+}
+.icon-chat-2:before {
+    content: "\e903";
+}
+.icon-cooking:before {
+    content: "\e904";
+}
+.icon-crafting:before {
+    content: "\e905";
+}
+.icon-dance:before {
+    content: "\e906";
+}
+.icon-dislike:before {
+    content: "\e907";
+}
+.icon-gaming:before {
+    content: "\e908";
+}
+.icon-heart:before {
+    content: "\e909";
+}
+.icon-like:before {
+    content: "\e90a";
+}
+.icon-magnifying-glass:before {
+    content: "\e90b";
+}
+.icon-sport:before {
+    content: "\e90c";
+}
+.icon-weird:before {
+    content: "\e90d";
+}
+
+/*HEADER*/
+header {
+    background: #263238;
+    box-shadow: 0 -1px 30px -1px;
+    height: 80px;
+    padding: 0 20px;
+    position: relative;
+}
+
+/*NAV*/
+header a {
+    text-decoration: none;
+    color: #eaeaea;
+    text-transform: uppercase;
+    font: 12px Lato;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*ADD A DWIT*/
+header>nav>ul>li:first-child {
+    padding-top: 20px;
+}
+
+header>nav>ul>li:first-child a img {
+    height: 22px;
+    width: 22px;
+    display: block;
+    margin: 0 auto 5px;
+    transform: rotate(45deg);
+}
+
+/*LOGO*/
+header>nav>ul>li:nth-child(2) a img {
+    padding-left: 200px;
+}
+
+/*RIGHT NAV*/
+header nav ul li ul li a {
+    margin-left: 20px;
+}
+
+header nav ul li ul li {
+    display: flex;
+    margin-top: 15px;
+}
+
+header nav ul li ul li a img{
+    height: 22px;
+    width: 22px;
+    display: block;
+    margin: 0 auto 5px;
+}
+
+/*SECTIONS*/
+section {
+    padding: 50px;
+}
+
+section h1 {
+    font: 30px Lato;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/*SECTION HOT CHALLENGE*/
+section.hot-challenge {
+    background: #e0e0e0;
+}
+
+section.hot-challenge .wrapper {
+    text-align: center;
+}
+
+/*ARTICLE*/
+section.hot-challenge article {
+    display: inline-block;
+    width: 358px;
+    height: 294px;
+    margin: 50px 20px;
+}
+
+section.hot-challenge article h2 {
+    background: #37474f;
+    padding: 10px;
+    font: 14px Lato;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    top: 37px;
+}
+
+section.hot-challenge article>img {
+    width: 100%;
+    box-shadow: 0 0 10px;
+    margin-bottom: 10px;
+}
+
+section.hot-challenge article h2 span {
+    color: #ffb300;
+}
+
+section.hot-challenge article>ul {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.6);
+    position: relative;
+    top: -95px;
+    padding: 10px;
+    color: #e0e0e0;
+    font: 14px Lato;
+    text-transform: uppercase;
+}
+
+section.hot-challenge article ul li:nth-child(2) {
+    margin: 0;
+}
+
+section.hot-challenge article ul li img {
+    height: 20px;
+    width: 20px;
+    display: block;
+    margin: 10px auto 0;
+}
+
+section.hot-challenge article ul li ul {
+    display: flex;
+}
+
+section.hot-challenge article ul li ul li {
+    margin-right: 15px;
+}
+
+section.hot-challenge .author-article {
+    display: flex;
+    justify-content: space-between;
+    color: #424242;
+    font: 14px Lato;
+    letter-spacing: 1px;
+}
+
+/*SECTION ADD A DWIT*/
+section.add-dwit img {
+    width: 50px;
+    height: 50px;
+}
+
+/*TYPOGRAPHIE*/
