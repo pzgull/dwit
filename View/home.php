@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>DWIT</title>
+    <!--Import materialize.css-->
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
@@ -88,20 +90,38 @@
     </section>
     <!--End of Recent Challenge Section-->
     <section class="add-dwit">
-        <form action="" id="addDwit">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="title" type="text" class="validate" required>
+                        <label for="title">Title of your challenge</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea id="description" class="materialize-textarea" required></textarea>
+                        <label for="description">Describe your challenge</label>
+                    </div>
+                </div>
+                <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
+            </form>
+        </div>
+    </section>
+    <form action="" id="addDwit">
             <fieldset>
                 <!--DATE-->
-                <label for="date">Date</label>
                 <input type="date" name="date" id="date">
+                <label for="date">Date</label>
                 <!--AUTHOR-->
-                <label for="author">Author</label>
                 <input type="text" name="author" id="author" placeholder="Nickname">
+                <label for="author">Author</label>
                 <!--TITLE-->
-                <label for="title">Title</label>
                 <input type="text" name="title" id="title" placeholder="Your title" required>
+                <label for="title">Title</label>
                 <!--DESCRIPTION-->
-                <label for="description">Description of your challenge:</label>
                 <textarea id="description" name="description" form="addDwit" placeholder="Your description" required></textarea>
+                <label for="description">Description of your challenge</label>
                 <!--CATEGORIES-->
                 <label>Categories:</label>
                 <label><input type="radio" name="category" id="art" value="art"><img src="../assets/img/picto/art.svg" alt="Art">Art</label>
@@ -116,7 +136,9 @@
                 <input type="submit" value="Add my challenge">
             </fieldset>
         </form>
-    </section>
     <!--End of Add a DWIT Section-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
 </body>
 </html>

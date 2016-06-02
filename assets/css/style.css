@@ -15,17 +15,22 @@ header a {
     font: 12px Lato;
 }
 
+header nav {
+    box-shadow: none;
+    background-color: #263238;
+}
+
 header nav ul {
     display: flex;
     justify-content: space-between;
 }
 
 /*ADD A DWIT*/
-header>nav>ul>li:first-child {
+header > nav > ul > li:first-child {
     padding-top: 20px;
 }
 
-header>nav>ul>li:first-child a img {
+header > nav > ul > li:first-child a img {
     height: 22px;
     width: 22px;
     display: block;
@@ -34,7 +39,7 @@ header>nav>ul>li:first-child a img {
 }
 
 /*LOGO*/
-header>nav>ul>li:nth-child(2) a img {
+header > nav > ul > li:nth-child(2) a img {
     padding-left: 200px;
 }
 
@@ -48,7 +53,7 @@ header nav ul li ul li {
     margin-top: 15px;
 }
 
-header nav ul li ul li a img{
+header nav ul li ul li a img {
     height: 22px;
     width: 22px;
     display: block;
@@ -97,7 +102,7 @@ section.hot-challenge article h2 {
     top: 37px;
 }
 
-section.hot-challenge article>img {
+section.hot-challenge article > img {
     width: 100%;
     box-shadow: 0 0 10px;
     margin-bottom: 10px;
@@ -107,10 +112,10 @@ section.hot-challenge article h2 span {
     color: #ffb300;
 }
 
-section.hot-challenge article>ul {
+section.hot-challenge article > ul {
     display: flex;
     justify-content: space-between;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     position: relative;
     top: -95px;
     padding: 10px;
@@ -152,4 +157,16 @@ section.add-dwit img {
     height: 50px;
 }
 
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ffb300;
+    box-shadow: 0 1px 0 0 #ffb300;
+}
+
+input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #ffb300;
+}
+
+.btn, .btn:focus, .btn:hover{
+    background-color: #ffb300;
+}
 /*TYPOGRAPHIE*/
