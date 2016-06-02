@@ -118,5 +118,7 @@
         </form>
     </section>
     <!--End of Add a DWIT Section-->
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
