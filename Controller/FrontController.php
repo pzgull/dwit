@@ -13,8 +13,8 @@ class FrontController
 {
     public function __construct(\PDO $pdo)
     {
-        if (isset($_GET['route'])) {
-            $currRoute = $_GET['route'];
+        if (isset($_GET['a'])) {
+            $currRoute = $_GET['a'];
         } else {
             $currRoute = APP_DEFAULT_ROOT;
         }
@@ -24,6 +24,12 @@ class FrontController
         switch ($currRoute) {
             case 'connect':
                 $methodName = 'connectAction';
+                break;
+            case 'details':
+                $methodName = 'details';
+                break;
+            case 'participation':
+                $methodName = 'participation';
                 break;
             default:
                 $methodName = 'displayAction';
