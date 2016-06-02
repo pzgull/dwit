@@ -19,12 +19,36 @@
                     <ul>
                         <li><a href="#"><img src="../assets/img/svg/magnifying-glass.svg" alt="Search">Search</a></li>
                         <li><a href="#"><img src="../assets/img/svg/chat-2.svg" alt="Notifications">Notification</a></li>
-                        <li><a href="#"><img src="../assets/img/svg/avatar.svg" alt="Account">My account</a></li>
+                        <li><a href="#" id="account"><img src="../assets/img/svg/avatar.svg" alt="Account">My account</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
+    <section class="account">
+        <div class="row">
+            <form class="col s12 offset-s1">
+                <div class="row">
+                    <div class="input-field col s10">
+                        <input id="login" type="text" class="validate">
+                        <label for="login">Login</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <input id="password" type="text" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input type="submit" value="Connect" class="waves-effect waves-light btn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--End of Account Section-->
     <section class="hot-challenge">
         <h1>Hot Challenge</h1>
         <div class="wrapper">
@@ -91,37 +115,21 @@
     <!--End of Recent Challenge Section-->
     <section class="add-dwit">
         <div class="row">
-            <form class="col s12">
+            <form action="" id="addDwit" class="col s12">
+                <!--TITLE-->
                 <div class="row">
                     <div class="input-field col s6">
                         <input id="title" type="text" class="validate" required>
                         <label for="title">Title of your challenge</label>
                     </div>
                 </div>
+                <!--DESCRIPTION-->
                 <div class="row">
                     <div class="input-field col s6">
                         <textarea id="description" class="materialize-textarea" required></textarea>
                         <label for="description">Describe your challenge</label>
                     </div>
                 </div>
-                <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
-            </form>
-        </div>
-    </section>
-    <form action="" id="addDwit">
-            <fieldset>
-                <!--DATE-->
-                <input type="date" name="date" id="date">
-                <label for="date">Date</label>
-                <!--AUTHOR-->
-                <input type="text" name="author" id="author" placeholder="Nickname">
-                <label for="author">Author</label>
-                <!--TITLE-->
-                <input type="text" name="title" id="title" placeholder="Your title" required>
-                <label for="title">Title</label>
-                <!--DESCRIPTION-->
-                <textarea id="description" name="description" form="addDwit" placeholder="Your description" required></textarea>
-                <label for="description">Description of your challenge</label>
                 <!--CATEGORIES-->
                 <label>Categories:</label>
                 <label><input type="radio" name="category" id="art" value="art"><img src="../assets/img/picto/art.svg" alt="Art">Art</label>
@@ -132,13 +140,21 @@
                 <label><input type="radio" name="category" id="musical" value="musical"><img src="../assets/img/svg/headphones.svg" alt="Musical">Musical</label>
                 <label><input type="radio" name="category" id="sport" value="sport"><img src="../assets/img/picto/sport.svg" alt="Sport">Sport</label>
                 <label><input type="radio" name="category" id="wtf!?" value="wtf!?"><img src="../assets/img/picto/weird.svg" alt="WTF!?">WTF!?</label>
-                <!--BUTTON-->
-                <input type="submit" value="Add my challenge">
-            </fieldset>
-        </form>
+                <!--SUBMIT BUTTON-->
+                <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
+            </form>
+        </div>
+    </section>
     <!--End of Add a DWIT Section-->
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#account").click(function(){
+            $(".account").slideToggle('fast');
+        });
+    });
+</script>
 </body>
 </html>
