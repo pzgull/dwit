@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>DWIT</title>
+    <!--Import materialize.css-->
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li><a href="#"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
-                <li><a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a></li>
+                <li>
+                    <a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a>
+                    <div></div>
+                </li>
                 <li>
                     <ul>
                         <li><a href="#"><img src="../assets/img/svg/magnifying-glass.svg" alt="Search">Search</a></li>
@@ -41,7 +46,7 @@
                                 <li>23<i class="icon-dislike"></i></li>
                             </ul>
                         </li>
-                        <li>Musical<i class="icon-headphones"></i></li>
+                        <li>Musical<i class="icon-headphones-orange"></i></li>
                         <li>112<i class="icon-heart"></i></li>
                     </ul>
                 </article>
@@ -61,7 +66,7 @@
                                 <li>23<i class="icon-dislike"></i></li>
                             </ul>
                         </li>
-                        <li>Musical<i class="icon-headphones"></i></li>
+                        <li>Musical<i class="icon-headphones-orange"></i></li>
                         <li>112<i class="icon-heart"></i></li>
                     </ul>
                 </article>
@@ -81,7 +86,7 @@
                                 <li>23<i class="icon-dislike"></i></li>
                             </ul>
                         </li>
-                        <li>Musical<i class="icon-headphones"></i></li>
+                        <li>Musical<i class="icon-headphones-orange"></i></li>
                         <li>112<i class="icon-heart"></i></li>
                     </ul>
                 </article>
@@ -94,35 +99,39 @@
     </section>
     <!--End of Recent Challenge Section-->
     <section class="add-dwit">
-        <form action="" id="addDwit">
-            <fieldset>
-                <!--DATE-->
-                <label for="date">Date</label>
-                <input type="date" name="date" id="date">
-                <!--AUTHOR-->
-                <label for="author">Author</label>
-                <input type="text" name="author" id="author" placeholder="Nickname">
-                <!--TITLE-->
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Your title" required>
-                <!--DESCRIPTION-->
-                <label for="description">Description of your challenge:</label>
-                <textarea id="description" name="description" form="addDwit" placeholder="Your description" required></textarea>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="title" type="text" class="validate" required>
+                        <label for="title">Title of your challenge</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea id="description" class="materialize-textarea" required></textarea>
+                        <label for="description">Describe your challenge</label>
+                    </div>
+                </div>
                 <!--CATEGORIES-->
-                <label>Categories:</label>
-                <label><input type="radio" name="category" id="art" value="art"><img src="../assets/img/picto/art.svg" alt="Art">Art</label>
-                <label><input type="radio" name="category" id="cooking" value="cooking"><img src="../assets/img/picto/cooking.svg" alt="Cooking">Cooking</label>
-                <label><input type="radio" name="category" id="crafting" value="crafting"><img src="../assets/img/picto/crafting.svg" alt="Crafting">Crafting</label>
-                <label><input type="radio" name="category" id="dance" value="dance"><img src="../assets/img/picto/dance.svg" alt="Dance">Dance</label>
-                <label><input type="radio" name="category" id="gaming" value="gaming"><img src="../assets/img/picto/gaming.svg" alt="Gaming">Gaming</label>
-                <label><input type="radio" name="category" id="musical" value="musical"><img src="../assets/img/svg/headphones.svg" alt="Musical">Musical</label>
-                <label><input type="radio" name="category" id="sport" value="sport"><img src="../assets/img/picto/sport.svg" alt="Sport">Sport</label>
-                <label><input type="radio" name="category" id="wtf!?" value="wtf!?"><img src="../assets/img/picto/weird.svg" alt="WTF!?">WTF!?</label>
+                <p>Categories:
+                    <label><input type="radio" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
+                    <label><input type="radio" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
+                    <label><input type="radio" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
+                    <label><input type="radio" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
+                    <label><input type="radio" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
+                    <label><input type="radio" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
+                    <label><input type="radio" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
+                    <label><input type="radio" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
+                </p>
                 <!--BUTTON-->
-                <input type="submit" value="Add my challenge">
-            </fieldset>
-        </form>
+                <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
+            </form>
+        </div>
     </section>
     <!--End of Add a DWIT Section-->
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
 </body>
 </html>
