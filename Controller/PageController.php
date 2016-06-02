@@ -21,6 +21,16 @@ class PageController extends Controller
 
     public function displayAction()
     {
-        return $this->render('connection.php');
+        return $this->render('home.php');
+    }
+
+    public function details()
+    {
+        return json_encode($this->repository->getDetailAction($_GET['id']));
+    }
+
+    public function participation()
+    {
+        return json_encode($this->repository->participationAction($_GET['id']));
     }
 }
