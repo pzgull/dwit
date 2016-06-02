@@ -78,6 +78,10 @@ section.hot-challenge .wrapper {
     text-align: center;
 }
 
+section.hot-challenge .wrapper a {
+    text-decoration: none;
+}
+
 /*ARTICLE*/
 section.hot-challenge article {
     display: inline-block;
