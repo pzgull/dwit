@@ -13,7 +13,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
+                <li><a href="#" id="addadwit"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
                 <li>
                     <a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a>
                     <div></div>
@@ -28,6 +28,45 @@
             </ul>
         </nav>
     </header>
+    <section class="add-dwit">
+        <div class="row">
+            <form action="" id="addDwit" class="col s12">
+                <!--TITLE-->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="title" type="text" class="validate" required>
+                        <label for="title">Title of your challenge</label>
+                    </div>
+                </div>
+                <!--DESCRIPTION-->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea id="description" class="materialize-textarea" required></textarea>
+                        <label for="description">Describe your challenge</label>
+                    </div>
+                </div>
+                <!--CATEGORIES-->
+                <div class="row categories">
+                    <p>Categories:
+                        <label id="icon-art"><input type="radio" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
+                        <label id="icon-cooking"><input type="radio" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
+                        <label id="icon-crafting"><input type="radio" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
+                        <label id="icon-dance"><input type="radio" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
+                        <label id="icon-gaming"><input type="radio" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
+                        <label id="icon-headphones"><input type="radio" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
+                        <label id="icon-sport"><input type="radio" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
+                        <label id="icon-weird"><input type="radio" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="input-field col s9 offset-s5">
+                        <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--End of Add a DWIT Section-->
     <section class="account">
         <div class="row">
             <form class="col s12 offset-s1">
@@ -53,8 +92,8 @@
     </section>
     <!--End of Account Section-->
     <section class="hot-challenge">
-        <h1>Hot <span>Challenge</span></h1>
         <div class="wrapper">
+        <h1>Hot <span>Challenges</span></h1>
             <a href="">
                 <article>
                     <h2>Subway bag <span>challenge</span></h2>
@@ -122,48 +161,9 @@
         <h1>Recent <span>challenges</span></h1>
     </section>
     <!--End of Recent Challenge Section-->
-    <section class="add-dwit">
-        <div class="row">
-            <form action="" id="addDwit" class="col s12">
-                <!--TITLE-->
-                <div class="row">
-                    <div class="input-field col s6">
-                        <input id="title" type="text" class="validate" required>
-                        <label for="title">Title of your challenge</label>
-                    </div>
-                </div>
-                <!--DESCRIPTION-->
-                <div class="row">
-                    <div class="input-field col s6">
-                        <textarea id="description" class="materialize-textarea" required></textarea>
-                        <label for="description">Describe your challenge</label>
-                    </div>
-                </div>
-                <!--CATEGORIES-->
-                <p>Categories:
-                    <label><input type="radio" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
-                    <label><input type="radio" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
-                    <label><input type="radio" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
-                    <label><input type="radio" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
-                    <label><input type="radio" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
-                    <label><input type="radio" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
-                    <label><input type="radio" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
-                    <label><input type="radio" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
-                </p>
-                <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
-            </form>
-        </div>
-    </section>
-    <!--End of Add a DWIT Section-->
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $("#account").click(function(){
-            $(".account").slideToggle('fast');
-        });
-    });
-</script>
+<script src="../assets/js/scripts.js"></script>
 </body>
 </html>
