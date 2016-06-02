@@ -146,7 +146,10 @@ section.hot-challenge .author-article {
     letter-spacing: 1px;
 }
 
-/*SECTION RECENT CHALLENGE*/
-
+/*SECTION ADD A DWIT*/
+section.add-dwit img {
+    width: 50px;
+    height: 50px;
+}
 
 /*TYPOGRAPHIE*/

@@ -87,5 +87,36 @@
         <h1>Recent challenges</h1>
     </section>
     <!--End of Recent Challenge Section-->
+    <section class="add-dwit">
+        <form action="" id="addDwit">
+            <fieldset>
+                <!--DATE-->
+                <label for="date">Date</label>
+                <input type="date" name="date" id="date">
+                <!--AUTHOR-->
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" placeholder="Nickname">
+                <!--TITLE-->
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" placeholder="Your title" required>
+                <!--DESCRIPTION-->
+                <label for="description">Description of your challenge:</label>
+                <textarea id="description" name="description" form="addDwit" placeholder="Your description" required></textarea>
+                <!--CATEGORIES-->
+                <label>Categories:</label>
+                <label><input type="radio" name="category" id="art" value="art"><img src="../assets/img/picto/art.svg" alt="Art">Art</label>
+                <label><input type="radio" name="category" id="cooking" value="cooking"><img src="../assets/img/picto/cooking.svg" alt="Cooking">Cooking</label>
+                <label><input type="radio" name="category" id="crafting" value="crafting"><img src="../assets/img/picto/crafting.svg" alt="Crafting">Crafting</label>
+                <label><input type="radio" name="category" id="dance" value="dance"><img src="../assets/img/picto/dance.svg" alt="Dance">Dance</label>
+                <label><input type="radio" name="category" id="gaming" value="gaming"><img src="../assets/img/picto/gaming.svg" alt="Gaming">Gaming</label>
+                <label><input type="radio" name="category" id="musical" value="musical"><img src="../assets/img/svg/headphones.svg" alt="Musical">Musical</label>
+                <label><input type="radio" name="category" id="sport" value="sport"><img src="../assets/img/picto/sport.svg" alt="Sport">Sport</label>
+                <label><input type="radio" name="category" id="wtf!?" value="wtf!?"><img src="../assets/img/picto/weird.svg" alt="WTF!?">WTF!?</label>
+                <!--BUTTON-->
+                <input type="submit" value="Add my challenge">
+            </fieldset>
+        </form>
+    </section>
+    <!--End of Add a DWIT Section-->
 </body>
 </html>
