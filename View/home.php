@@ -24,7 +24,7 @@
         </nav>
     </header>
     <section class="hot-challenge">
-        <h1>Hot Challenge</h1>
+        <h1>Hot <span>Challenge</span></h1>
         <div class="wrapper">
             <a href="">
                 <article>
@@ -37,12 +37,12 @@
                     <ul>
                         <li>
                             <ul>
-                                <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                                <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+                                <li>16<i class="icon-like"></i></li>
+                                <li>23<i class="icon-dislike"></i></li>
                             </ul>
                         </li>
-                        <li>Musical<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                        <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
+                        <li>Musical<i class="icon-headphones"></i></li>
+                        <li>112<i class="icon-heart"></i></li>
                     </ul>
                 </article>
             </a>
@@ -57,12 +57,12 @@
                     <ul>
                         <li>
                             <ul>
-                                <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                                <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+                                <li>16<i class="icon-like"></i></li>
+                                <li>23<i class="icon-dislike"></i></li>
                             </ul>
                         </li>
-                        <li>Art<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                        <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
+                        <li>Musical<i class="icon-headphones"></i></li>
+                        <li>112<i class="icon-heart"></i></li>
                     </ul>
                 </article>
             </a>
@@ -77,12 +77,12 @@
                     <ul>
                         <li>
                             <ul>
-                                <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                                <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+                                <li>16<i class="icon-like"></i></li>
+                                <li>23<i class="icon-dislike"></i></li>
                             </ul>
                         </li>
-                        <li>Wtf!?<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                        <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
+                        <li>Musical<i class="icon-headphones"></i></li>
+                        <li>112<i class="icon-heart"></i></li>
                     </ul>
                 </article>
             </a>
@@ -90,7 +90,7 @@
     </section>
     <!--End of Hot Challenge Section-->
     <section class="recent-challenge">
-        <h1>Recent challenges</h1>
+        <h1>Recent <span>challenges</span></h1>
     </section>
     <!--End of Recent Challenge Section-->
     <section class="add-dwit">
