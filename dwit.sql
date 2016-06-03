@@ -4,6 +4,7 @@
 --
 -- Host: localhost:3306
 -- Generation Time: Jun 02, 2016 at 08:31 AM
+
 -- Server version: 5.5.49-log
 -- PHP Version: 7.0.6
 
@@ -82,6 +83,7 @@ CREATE TABLE IF NOT EXISTS `defi_user` (
   `id_defi` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+
 --
 -- Dumping data for table `defi_user`
 --
@@ -104,6 +106,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `right` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+
 --
 -- Dumping data for table `user`
 --
@@ -112,6 +115,7 @@ INSERT INTO `user` (`id`, `pseudo`, `password`, `right`) VALUES
 (1, 'jean', 'jean', 1),
 (2, 'vincent', 'vincent', 0),
 (3, 'vincent', 'vincent', 0);
+
 
 --
 -- Indexes for dumped tables
