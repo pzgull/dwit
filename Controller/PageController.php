@@ -16,7 +16,7 @@ class PageController extends Controller
     public function connectAction()
     {
         $this->connect->connectAction();
-        return $this->render('connection.php');
+        return $this->render('home.php');
     }
 
     public function displayAction()
@@ -41,5 +41,13 @@ class PageController extends Controller
     public function getLike()
     {
         return json_encode($this->repository->getLikeAction($_GET['id'], $_GET['a']));
+    }
+
+    public function addChallenge()
+    {
+        session_start();
+        $idCat = $this->repository->getIdCategory($_POST['category']);
+        $this->repository->addChallengeAction($_POST['titre'], $_POST['description'], $idCat, $_SESSION['login']);
+        return $this->render('home.php');
     }
 }

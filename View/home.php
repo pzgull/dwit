@@ -31,18 +31,18 @@
 
     <section class="add-dwit">
         <div class="row">
-            <form action="" id="addDwit" class="col s12">
+            <form action="/?a=add" method="post" id="addDwit" class="col s12">
                 <!--TITLE-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="title" type="text" class="validate" required>
+                        <input id="title" name="titre" type="text" class="validate" required>
                         <label for="title">Title of your challenge</label>
                     </div>
                 </div>
                 <!--DESCRIPTION-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <textarea id="description" class="materialize-textarea" required></textarea>
+                        <textarea id="description" name="description" class="materialize-textarea" required></textarea>
                         <label for="description">Describe your challenge</label>
                     </div>
                 </div>
@@ -70,16 +70,16 @@
     <!--End of Add a DWIT Section-->
     <section class="account">
         <div class="row">
-            <form class="col s12 offset-s1">
+            <form class="col s12 offset-s1" action="/?a=connect" method="post">
                 <div class="row">
                     <div class="input-field col s10">
-                        <input id="login" type="text" class="validate">
+                        <input id="login" type="text" class="validate" name="pseudo" required>
                         <label for="login">Login</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s10">
-                        <input id="password" type="text" class="validate">
+                        <input id="password" type="text" class="validate" name="password" required>
                         <label for="password">Password</label>
                     </div>
                 </div>

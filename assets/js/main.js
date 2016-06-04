@@ -7,7 +7,6 @@
     $http.get('/?a=details').then(function(response) {
       $scope.challenges = response.data;
       $scope.challenges.map(function(item) {
-        item['author'] = 'John Doe';
         item['img'] = '../assets/img/image1.png';
       });
     });
