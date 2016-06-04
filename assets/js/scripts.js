@@ -6,16 +6,6 @@ $(document).ready(function(){
         $(".add-dwit").slideToggle('fast');
     });
 
-
-    // $('.categories').find('p')
-    // .children('label').each(function() {
-    //   $(this).on('click', function(e) {
-    //     e.preventDefault();
-    //     $(this).find('i').toggleClass('yellow');
-    //   });
-    // });
-
-
     $("#icon-art").click(function(event){
         $(event.target).children().toggleClass("icon-art-yellow");
     });
