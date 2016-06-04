@@ -394,3 +394,6 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
     font-size: 35px;
     color: #ffb300;
 }
+.icon-share:before {
+    content: "\e90f";
+}
