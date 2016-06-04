@@ -80,4 +80,54 @@ class PageRepository
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
     }
+
+    public function getCategorieAction()
+    {
+        $sql = "SELECT
+                    `id`,
+                    `name`
+                FROM
+                    `categorie`
+                WHERE 1
+                ;";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+    }
+
+    public function getLikeAction($id = null, $element)
+    {
+        $sql = "SELECT
+                    `id`
+                ";
+        
+        switch ($element) {
+            case 'like':
+                $sql .= ", `like`";
+                break;
+            case 'success':
+                $sql .= ", `success`";
+                break;
+            case 'failed':
+                $sql .= ", `failed`";
+                break;
+        }
+
+        $sql .= "FROM `defi` ";
+
+        if ($id != null) {
+            $sql .= "WHERE
+                        `id` = :id
+                    ;";
+        }
+
+        $stmt = $this->pdo->prepare($sql);
+
+        if ($id != null) {
+            $stmt->bindParam(':id', $id);
+        }
+
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+    }
 }

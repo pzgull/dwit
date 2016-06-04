@@ -33,4 +33,13 @@ class PageController extends Controller
     {
         return json_encode($this->repository->participationAction($_GET['id']));
     }
+
+    public function getCategorie()
+    {
+        return json_encode($this->repository->getCategorieAction());
+    }
+    public function getLike()
+    {
+        return json_encode($this->repository->getLikeAction($_GET['id'], $_GET['a']));
+    }
 }

@@ -3,88 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <title>DWIT</title>
+    <!--Import materialize.css-->
     <link rel="stylesheet" href="../assets/css/reset.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
-                <li><a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a></li>
+                <li><a href="#" id="addadwit"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
+                <li>
+                    <a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a>
+                    <div></div>
+                </li>
                 <li>
                     <ul>
                         <li><a href="#"><img src="../assets/img/svg/magnifying-glass.svg" alt="Search">Search</a></li>
                         <li><a href="#"><img src="../assets/img/svg/chat-2.svg" alt="Notifications">Notification</a></li>
-                        <li><a href="#"><img src="../assets/img/svg/avatar.svg" alt="Account">My account</a></li>
+                        <li><a href="#" id="account"><img src="../assets/img/svg/avatar.svg" alt="Account">My account</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
+
+    <section class="add-dwit">
+        <div class="row">
+            <form action="" id="addDwit" class="col s12">
+                <!--TITLE-->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="title" type="text" class="validate" required>
+                        <label for="title">Title of your challenge</label>
+                    </div>
+                </div>
+                <!--DESCRIPTION-->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <textarea id="description" class="materialize-textarea" required></textarea>
+                        <label for="description">Describe your challenge</label>
+                    </div>
+                </div>
+                <!--CATEGORIES-->
+                <div class="row categories">
+                    <p>Categories:
+                        <label id="icon-art"><input type="radio" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
+                        <label id="icon-cooking"><input type="radio" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
+                        <label id="icon-crafting"><input type="radio" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
+                        <label id="icon-dance"><input type="radio" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
+                        <label id="icon-gaming"><input type="radio" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
+                        <label id="icon-headphones"><input type="radio" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
+                        <label id="icon-sport"><input type="radio" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
+                        <label id="icon-weird"><input type="radio" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="input-field col s9 offset-s5">
+                        <input type="submit" value="Add my challenge" class="waves-effect waves-light btn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--End of Add a DWIT Section-->
+    <section class="account">
+        <div class="row">
+            <form class="col s12 offset-s1">
+                <div class="row">
+                    <div class="input-field col s10">
+                        <input id="login" type="text" class="validate">
+                        <label for="login">Login</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s10">
+                        <input id="password" type="text" class="validate">
+                        <label for="password">Password</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input type="submit" value="Connect" class="waves-effect waves-light btn">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--End of Account Section-->
     <section class="hot-challenge" ng-controller="ChallengeController">
-        <h1>Hot Challenge</h1>
         <div class="wrapper">
-
-        <article ng-repeat="challenge in challenges | filter: 'C'">
-            <h2>{{ challenge.titre }} <span>challenge</span></h2>
-            <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
-            <div class="author-article">
-                <h3>Author : {{ challenge.author }}</h3>
-                <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
-            </div>
-            <ul>
-                <li>
+          <h1>Hot <span>Challenges</span></h1>
+            <a href="" ng-repeat="challenge in challenges">
+                <article>
+                    <h2>{{ challenge.titre }} <span>challenge</span></h2>
+                    <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
+                    <div class="author-article">
+                      <h3>Author : {{ challenge.author }}</h3>
+                      <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
+                    </div>
                     <ul>
-                        <li>{{ challenge.success }}<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                        <li>{{ challenge.failed}}<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+                        <li>
+                            <ul>
+                                <li>{{ challenge.success }}<i class="icon-like"></i></li>
+                                <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                            </ul>
+                        </li>
+                        <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
+                        <li>{{ challenge.like }}<i class="icon-heart"></i></li>
                     </ul>
-                </li>
-                <li>{{ challenge.name }}<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                <li>{{ challenge.like }}<img src="../assets/img/svg/heart.svg" alt="Like"></li>
-            </ul>
-        </article>
-
+                </article>
+            </a>
         </div>
     </section>
     <!--End of Hot Challenge Section-->
     <section class="recent-challenge">
-        <h1>Recent challenges</h1>
+        <h1>Recent <span>challenges</span></h1>
     </section>
-    <!--End of Recent Challenge Section-->
-    <section class="add-dwit">
-        <form action="" id="addDwit">
-            <fieldset>
-                <!--DATE-->
-                <label for="date">Date</label>
-                <input type="date" name="date" id="date">
-                <!--AUTHOR-->
-                <label for="author">Author</label>
-                <input type="text" name="author" id="author" placeholder="Nickname">
-                <!--TITLE-->
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Your title" required>
-                <!--DESCRIPTION-->
-                <label for="description">Description of your challenge:</label>
-                <textarea id="description" name="description" form="addDwit" placeholder="Your description" required></textarea>
-                <!--CATEGORIES-->
-                <label>Categories:</label>
-                <label><input type="radio" name="category" id="art" value="art"><img src="../assets/img/picto/art.svg" alt="Art">Art</label>
-                <label><input type="radio" name="category" id="cooking" value="cooking"><img src="../assets/img/picto/cooking.svg" alt="Cooking">Cooking</label>
-                <label><input type="radio" name="category" id="crafting" value="crafting"><img src="../assets/img/picto/crafting.svg" alt="Crafting">Crafting</label>
-                <label><input type="radio" name="category" id="dance" value="dance"><img src="../assets/img/picto/dance.svg" alt="Dance">Dance</label>
-                <label><input type="radio" name="category" id="gaming" value="gaming"><img src="../assets/img/picto/gaming.svg" alt="Gaming">Gaming</label>
-                <label><input type="radio" name="category" id="musical" value="musical"><img src="../assets/img/svg/headphones.svg" alt="Musical">Musical</label>
-                <label><input type="radio" name="category" id="sport" value="sport"><img src="../assets/img/picto/sport.svg" alt="Sport">Sport</label>
-                <label><input type="radio" name="category" id="wtf!?" value="wtf!?"><img src="../assets/img/picto/weird.svg" alt="WTF!?">WTF!?</label>
-                <!--BUTTON-->
-                <input type="submit" value="Add my challenge">
-            </fieldset>
-        </form>
-    </section>
-    <!--End of Add a DWIT Section-->
-    <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../assets/js/main.js"></script>
+
+  <!--Import jQuery before materialize.js-->
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/scripts.js"></script>
+
 </body>
 </html>

@@ -31,6 +31,15 @@ class FrontController
             case 'participation':
                 $methodName = 'participation';
                 break;
+            case 'like':
+                $methodName = 'getLike';
+                break;
+            case 'success':
+                $methodName = 'getLike';
+                break;
+            case 'failed':
+                $methodName = 'getLike';
+                break;
             default:
                 $methodName = 'displayAction';
                 break;
