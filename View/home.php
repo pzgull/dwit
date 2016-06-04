@@ -27,22 +27,22 @@
         <h1>Hot Challenge</h1>
         <div class="wrapper">
 
-        <article ng-repeat="challenge in challenges">
-            <h2>{{ challenge.title }} <span>challenge</span></h2>
+        <article ng-repeat="challenge in challenges | filter: 'C'">
+            <h2>{{ challenge.titre }} <span>challenge</span></h2>
             <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
             <div class="author-article">
                 <h3>Author : {{ challenge.author }}</h3>
-                <p>{{ challenge.date }}</p>
+                <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
             </div>
             <ul>
                 <li>
                     <ul>
-                        <li>16<img src="../assets/img/svg/like.svg" alt="Success"></li>
-                        <li>23<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
+                        <li>{{ challenge.success }}<img src="../assets/img/svg/like.svg" alt="Success"></li>
+                        <li>{{ challenge.failed}}<img src="../assets/img/svg/dislike.svg" alt="Fail"></li>
                     </ul>
                 </li>
-                <li>Musical<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
-                <li>112<img src="../assets/img/svg/heart.svg" alt="Like"></li>
+                <li>{{ challenge.name }}<img src="../assets/img/svg/headphones.svg" alt="Category"></li>
+                <li>{{ challenge.like }}<img src="../assets/img/svg/heart.svg" alt="Like"></li>
             </ul>
         </article>
 
