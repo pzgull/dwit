@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="diwit">
 <head>
     <meta charset="UTF-8">
     <title>DWIT</title>
@@ -28,20 +28,21 @@
             </ul>
         </nav>
     </header>
+
     <section class="add-dwit">
         <div class="row">
-            <form action="" id="addDwit" class="col s12">
+            <form action="/?a=add" method="post" id="addDwit" class="col s12">
                 <!--TITLE-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <input id="title" type="text" class="validate" required>
+                        <input id="title" name="titre" type="text" class="validate" required>
                         <label for="title">Title of your challenge</label>
                     </div>
                 </div>
                 <!--DESCRIPTION-->
                 <div class="row">
                     <div class="input-field col s6">
-                        <textarea id="description" class="materialize-textarea" required></textarea>
+                        <textarea id="description" name="description" class="materialize-textarea" required></textarea>
                         <label for="description">Describe your challenge</label>
                     </div>
                 </div>
@@ -69,16 +70,16 @@
     <!--End of Add a DWIT Section-->
     <section class="account">
         <div class="row">
-            <form class="col s12 offset-s1">
+            <form class="col s12 offset-s1" action="/?a=connect" method="post">
                 <div class="row">
                     <div class="input-field col s10">
-                        <input id="login" type="text" class="validate">
+                        <input id="login" type="text" class="validate" name="pseudo" required>
                         <label for="login">Login</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s10">
-                        <input id="password" type="text" class="validate">
+                        <input id="password" type="text" class="validate" name="password" required>
                         <label for="password">Password</label>
                     </div>
                 </div>
@@ -91,79 +92,65 @@
         </div>
     </section>
     <!--End of Account Section-->
-    <section class="hot-challenge">
+    <div ng-controller="ChallengeController">
+      <section class="hot-challenge">
         <div class="wrapper">
-        <h1>Hot <span>Challenges</span></h1>
-            <a href="">
-                <article>
-                    <h2>Subway bag <span>challenge</span></h2>
-                    <img src="../assets/img/image1.png" alt="Image 1">
-                    <div class="author-article">
-                        <h3>Author : Jean Bon</h3>
-                        <p>28/05/2016</p>
-                    </div>
-                    <ul>
-                        <li>
-                            <ul>
-                                <li>16<i class="icon-like"></i></li>
-                                <li>23<i class="icon-dislike"></i></li>
-                            </ul>
-                        </li>
-                        <li>Musical<i class="icon-headphones-orange"></i></li>
-                        <li>112<i class="icon-heart"></i></li>
-                    </ul>
-                </article>
-            </a>
-            <a href="">
-                <article>
-                    <h2>GIF <span>challenge</span></h2>
-                    <img src="../assets/img/image2.gif" alt="Image 2">
-                    <div class="author-article">
-                        <h3>Author : Jean Bon</h3>
-                        <p>29/05/2016</p>
-                    </div>
-                    <ul>
-                        <li>
-                            <ul>
-                                <li>16<i class="icon-like"></i></li>
-                                <li>23<i class="icon-dislike"></i></li>
-                            </ul>
-                        </li>
-                        <li>Musical<i class="icon-headphones-orange"></i></li>
-                        <li>112<i class="icon-heart"></i></li>
-                    </ul>
-                </article>
-            </a>
-            <a href="">
-                <article>
-                    <h2>Yann's head <span>challenge</span></h2>
-                    <img src="../assets/img/image3.png" alt="Image 3">
-                    <div class="author-article">
-                        <h3>Author : Jean Bon</h3>
-                        <p>30/05/2016</p>
-                    </div>
-                    <ul>
-                        <li>
-                            <ul>
-                                <li>16<i class="icon-like"></i></li>
-                                <li>23<i class="icon-dislike"></i></li>
-                            </ul>
-                        </li>
-                        <li>Musical<i class="icon-headphones-orange"></i></li>
-                        <li>112<i class="icon-heart"></i></li>
-                    </ul>
-                </article>
-            </a>
+          <h1>Hot <span>Challenges</span></h1>
+          <a href="" ng-repeat="challenge in challenges | orderBy:'-like' | limitTo: 3">
+              <article>
+                  <h2>{{ challenge.titre }} <span>challenge</span></h2>
+                  <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
+                  <div class="author-article">
+                    <h3>Author : {{ challenge.author }}</h3>
+                    <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
+                  </div>
+                  <ul>
+                      <li>
+                          <ul>
+                              <li>{{ challenge.success }}<i class="icon-like"></i></li>
+                              <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                          </ul>
+                      </li>
+                      <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
+                      <li>{{ challenge.like }}<i class="icon-heart"></i></li>
+                  </ul>
+              </article>
+          </a>
         </div>
-    </section>
-    <!--End of Hot Challenge Section-->
-    <section class="recent-challenge">
-        <h1>Recent <span>challenges</span></h1>
-    </section>
-    <!--End of Recent Challenge Section-->
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
-<script src="../assets/js/scripts.js"></script>
+      </section>
+      <!--End of Hot Challenge Section-->
+      <section class="hot-challenge">
+        <div class="wrapper">
+          <h1>Recent <span>challenges</span></h1>
+          <a href="" ng-repeat="challenge in challenges | orderBy:'-date' | limitTo: 3">
+              <article>
+                  <h2>{{ challenge.titre }} <span>challenge</span></h2>
+                  <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
+                  <div class="author-article">
+                    <h3>Author : {{ challenge.author }}</h3>
+                    <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
+                  </div>
+                  <ul>
+                      <li>
+                          <ul>
+                              <li>{{ challenge.success }}<i class="icon-like"></i></li>
+                              <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                          </ul>
+                      </li>
+                      <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
+                      <li>{{ challenge.like }}<i class="icon-heart"></i></li>
+                  </ul>
+              </article>
+          </a>
+        </div>
+      </section>
+  </div>
+  <!--Import jQuery before materialize.js-->
+  <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/scripts.js"></script>
+
 </body>
 </html>

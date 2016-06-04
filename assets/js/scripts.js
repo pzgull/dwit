@@ -5,7 +5,6 @@ $(document).ready(function(){
     $("#addadwit").click(function(){
         $(".add-dwit").slideToggle('fast');
     });
-    
 
     $("#icon-art").click(function(event){
         $(event.target).children().toggleClass("icon-art-yellow");

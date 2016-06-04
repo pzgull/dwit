@@ -40,6 +40,9 @@ class FrontController
             case 'failed':
                 $methodName = 'getLike';
                 break;
+            case 'add':
+                $methodName = 'addChallenge';
+                break;
             default:
                 $methodName = 'displayAction';
                 break;

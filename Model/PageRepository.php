@@ -29,7 +29,8 @@ class PageRepository
                   `failed`,
                   `like`,
                   `name`,
-                  `date`
+                  `date`,
+                  `author`
                 FROM
                   `defi`
                 LEFT JOIN
@@ -129,5 +130,30 @@ class PageRepository
 
         $stmt->execute();
         return $stmt->fetchAll(\PDO::FETCH_OBJ);
+    }
+
+    public function getIdCategory($category)
+    {
+        $sql = 'SELECT `id` FROM `categorie` WHERE `name` = :name ;';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':name', $category);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
+    public function addChallengeAction($titre, $descr, $idCat, $author)
+    {
+        $sql = 'INSERT INTO
+                    `defi`
+                      (`titre`, `description`, `id_categorie`, `author`)
+                VALUES
+                      (:titre, :description, :id_categorie, :author);';
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':titre', $titre);
+        $stmt->bindParam(':description', $descr);
+        $stmt->bindParam(':id_categorie', $idCat);
+        $stmt->bindParam(':author', $author);
+        $stmt->execute();
+        return $stmt;
     }
 }
