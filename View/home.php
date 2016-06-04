@@ -92,36 +92,59 @@
         </div>
     </section>
     <!--End of Account Section-->
-    <section class="hot-challenge" ng-controller="ChallengeController">
+    <div ng-controller="ChallengeController">
+      <section class="hot-challenge">
         <div class="wrapper">
           <h1>Hot <span>Challenges</span></h1>
-            <a href="" ng-repeat="challenge in challenges">
-                <article>
-                    <h2>{{ challenge.titre }} <span>challenge</span></h2>
-                    <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
-                    <div class="author-article">
-                      <h3>Author : {{ challenge.author }}</h3>
-                      <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
-                    </div>
-                    <ul>
-                        <li>
-                            <ul>
-                                <li>{{ challenge.success }}<i class="icon-like"></i></li>
-                                <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
-                            </ul>
-                        </li>
-                        <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
-                        <li>{{ challenge.like }}<i class="icon-heart"></i></li>
-                    </ul>
-                </article>
-            </a>
+          <a href="" ng-repeat="challenge in challenges | orderBy:'-like' | limitTo: 3">
+              <article>
+                  <h2>{{ challenge.titre }} <span>challenge</span></h2>
+                  <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
+                  <div class="author-article">
+                    <h3>Author : {{ challenge.author }}</h3>
+                    <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
+                  </div>
+                  <ul>
+                      <li>
+                          <ul>
+                              <li>{{ challenge.success }}<i class="icon-like"></i></li>
+                              <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                          </ul>
+                      </li>
+                      <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
+                      <li>{{ challenge.like }}<i class="icon-heart"></i></li>
+                  </ul>
+              </article>
+          </a>
         </div>
-    </section>
-    <!--End of Hot Challenge Section-->
-    <section class="recent-challenge">
-        <h1>Recent <span>challenges</span></h1>
-    </section>
-
+      </section>
+      <!--End of Hot Challenge Section-->
+      <section class="hot-challenge">
+        <div class="wrapper">
+          <h1>Recent <span>challenges</span></h1>
+          <a href="" ng-repeat="challenge in challenges | orderBy:'-date' | limitTo: 3">
+              <article>
+                  <h2>{{ challenge.titre }} <span>challenge</span></h2>
+                  <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
+                  <div class="author-article">
+                    <h3>Author : {{ challenge.author }}</h3>
+                    <p>{{ challenge.date | date: 'dd/MM/yyyy' }}</p>
+                  </div>
+                  <ul>
+                      <li>
+                          <ul>
+                              <li>{{ challenge.success }}<i class="icon-like"></i></li>
+                              <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                          </ul>
+                      </li>
+                      <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
+                      <li>{{ challenge.like }}<i class="icon-heart"></i></li>
+                  </ul>
+              </article>
+          </a>
+        </div>
+      </section>
+  </div>
   <!--Import jQuery before materialize.js-->
   <script src="../bower_components/jquery/dist/jquery.min.js"></script>
   <script src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
