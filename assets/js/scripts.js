@@ -42,4 +42,24 @@ $(document).ready(function(){
     $("#icon-weird").click(function(event){
         $(event.target).children().toggleClass("icon-weird-yellow");
     });
+    
+    $("#icon-dance").click(function(event){
+        $(event.target).children().toggleClass("icon-dance-yellow");
+    });
+
+    $("#icon-gaming").click(function(event){
+        $(event.target).children().toggleClass("icon-gaming-yellow");
+    });
+
+    $("#icon-headphones").click(function(event){
+        $(event.target).children().toggleClass("icon-headphones-yellow");
+    });
+
+    $("#icon-sport").click(function(event){
+        $(event.target).children().toggleClass("icon-sport-yellow");
+    });
+
+    $("#icon-weird").click(function(event){
+        $(event.target).children().toggleClass("icon-weird-yellow");
+    });
 });

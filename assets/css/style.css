@@ -332,6 +332,7 @@ section.hot-challenge .author-article h3 {
     top: 10px;
     left: 310px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .failed, .button-failed {
@@ -344,6 +345,7 @@ section.hot-challenge .author-article h3 {
     top: 80px;
     left: 310px;
     padding: 5px;
+    cursor: pointer;
 }
 
 .succeed h2, .button-succeed h2, .failed h2, .button-failed h2 {
@@ -681,3 +683,4 @@ footer nav ul {
 :focus {
     outline: none;
 }
+

@@ -24,6 +24,11 @@ class PageController extends Controller
         return $this->render('home.php');
     }
 
+    public function displayPage()
+    {
+        return $this->render('detail.php');
+    }
+
     public function details()
     {
         return json_encode($this->repository->getDetailAction($_GET['id']));
@@ -40,9 +45,32 @@ class PageController extends Controller
     }
     public function getLike()
     {
-        return json_encode($this->repository->getLikeAction($_GET['id'], $_GET['a']));
+        return $this->repository->getLikeAction($_GET['id'], $_GET['a']);
     }
 
+    public function getSuccess()
+    {
+        $element = '';
+        switch ($_GET['a']) {
+            case 'getlike':
+                $element = 'like';
+                break;
+            case 'getsuccess':
+                $element = 'success';
+                break;
+            case 'getfailed':
+                $element = 'failed';
+                break;
+        }
+        return json_encode($this->repository->getLikeAction($_GET['id'], $element));
+    }
+    public function addLike()
+    {
+        $nb = $this->getLike();
+        $nb = intval($nb[$_GET['a']]) + 1;
+        $this->repository->addLikeAction($_GET['id'], $_GET['a'], $nb);
+        return $this->render('detail.php');
+    }
     public function addChallenge()
     {
         session_start();
