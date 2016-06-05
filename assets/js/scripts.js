@@ -11,6 +11,10 @@ $(document).ready(function(){
         $(".search").slideToggle('fast');
     });
 
+    $("#subSearch").click(function(){
+        $(".search").slideToggle('fast');
+    });
+
     $("#icon-art").click(function(event){
         $(event.target).children().toggleClass("icon-art-yellow");
     });
@@ -42,7 +46,7 @@ $(document).ready(function(){
     $("#icon-weird").click(function(event){
         $(event.target).children().toggleClass("icon-weird-yellow");
     });
-    
+
     $("#icon-dance").click(function(event){
         $(event.target).children().toggleClass("icon-dance-yellow");
     });

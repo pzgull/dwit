@@ -252,7 +252,7 @@ section.hot-challenge article h2 {
     top: 37px;
 }
 
-section.hot-challenge article>img {
+section.hot-challenge article>img, .imgDetails {
     width: 360px;
     height: 300px;
     box-shadow: 0 0 10px;
@@ -683,4 +683,3 @@ footer nav ul {
 :focus {
     outline: none;
 }
-
