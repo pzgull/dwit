@@ -174,17 +174,6 @@
                         <h2>Failed</h2>
                         <p>-1 <i class="icon-dislike"></i></p>
                     </div>
-                </article>
-                <article>
-                    <img src="../assets/img/image1.png" alt="Photo du challenger">
-                    <div class="button-succeed">
-                        <h2>Succeed</h2>
-                        <p>+1 <i class="icon-like"></i></p>
-                    </div>
-                    <div class="button-failed">
-                        <h2>Failed</h2>
-                        <p>-1 <i class="icon-dislike"></i></p>
-                    </div>
                     <div class="challenger-frame">
                         <p>16<i class="icon-like-green"></i></p>
                         <div>
