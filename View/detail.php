@@ -13,7 +13,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="#" id="addadwit"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
+            <li class=""><a href="#" id="addadwit"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
             <li>
                 <a href="../"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a>
                 <div></div>
@@ -99,6 +99,38 @@
     </form>
 </section>
 <!--End of Add a DWIT Section-->
+<section class="search">
+    <form action="">
+        <div class="search-frame">
+            <div class="search-for">
+                <label for="searchFor">You are searching for:</label>
+                <input type="search" id="searchFor">
+            </div>
+            <div class="sorted-by">
+                <p>Sorted by:</p>
+                <label for="byDate"><input type="radio" id="byDate">Date</label>
+                <p>or</p>
+                <label for="byLike"><input type="radio" id="byLike">Like</label>
+            </div>
+        </div>
+        <div class="row categories">
+            <p>Categories:
+                <label id="icon-art"><input type="radio" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
+                <label id="icon-cooking"><input type="radio" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
+                <label id="icon-crafting"><input type="radio" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
+                <label id="icon-dance"><input type="radio" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
+                <label id="icon-gaming"><input type="radio" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
+                <label id="icon-headphones"><input type="radio" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
+                <label id="icon-sport"><input type="radio" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
+                <label id="icon-weird"><input type="radio" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
+            </p>
+        </div>
+        <div class="button-search">
+            <input type="submit" value="Search" class="waves-effect waves-light btn">
+        </div>
+    </form>
+</section>
+<!--End of Search Section-->
 <section class="account">
     <div class="row">
         <form class="col s12 offset-s1" action="/?a=connect" method="post">
@@ -155,11 +187,11 @@
                     <h2>Description:</h2>
                     <p>{{ details.description }}</p>
                 </div>
+            </div>
         </div>
-        </div>
-        <div class="arrow-down"></div>
-    </section>
-    <section class="challengers">
+    <div class="arrow-down"></div>
+</section>
+<section class="challengers">
         <div class="inner-details">
             <h1>Challengers</h1>
             <div class="wrapper-details">
