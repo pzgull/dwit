@@ -19,9 +19,6 @@ app.controller('DetailController', function($scope, $http, $location) {
 
     $http.get('/?a=details&id='+id).then(function(response) {
         $scope.details = response.data[0];
-        $scope.details.map(function(item) {
-        item['img'] = '../../assets/img/image1.png';
-      });
     });
 
     $scope.addLike = function(){
@@ -40,7 +37,7 @@ app.controller('DetailController', function($scope, $http, $location) {
     $scope.addFailed = function(){
         $http.post('/?a=failed&id='+id).then(function(response) {
             $http.get('/?a=getfailed&id='+id).then(function(response) {
-                $scope.details.failed = response.data['failed']; 
+                $scope.details.failed = response.data['failed'];
             });
         });
     }

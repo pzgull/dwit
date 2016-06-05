@@ -72,7 +72,7 @@
             <div class="search-frame">
                 <div class="search-for">
                     <label for="searchFor">You are searching for:</label>
-                    <input type="search" id="searchFor">
+                    <input type="search" id="searchFor" ng-model="search">
                 </div>
                 <div class="sorted-by">
                     <p>Sorted by:</p>
@@ -83,18 +83,18 @@
             </div>
             <div class="row categories">
                 <p>Categories:
-                    <label id="icon-art"><input type="radio" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
-                    <label id="icon-cooking"><input type="radio" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
-                    <label id="icon-crafting"><input type="radio" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
-                    <label id="icon-dance"><input type="radio" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
-                    <label id="icon-gaming"><input type="radio" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
-                    <label id="icon-headphones"><input type="radio" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
-                    <label id="icon-sport"><input type="radio" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
-                    <label id="icon-weird"><input type="radio" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
+                    <label id="icon-art"><input type="radio" ng-model="searchCategory" name="category" id="art" value="art"><i class="icon-art"></i>Art</label><!--ART-->
+                    <label id="icon-cooking"><input type="radio" ng-model="searchCategory" name="category" id="cooking" value="cooking"><i class="icon-cooking"></i>Cooking</label><!--COOKING-->
+                    <label id="icon-crafting"><input type="radio" ng-model="searchCategory" name="category" id="crafting" value="crafting"><i class="icon-crafting"></i>Crafting</label><!--CRAFTING-->
+                    <label id="icon-dance"><input type="radio" ng-model="searchCategory" name="category" id="dance" value="dance"><i class="icon-dance"></i>Dance</label><!--DANCE-->
+                    <label id="icon-gaming"><input type="radio" ng-model="searchCategory" name="category" id="gaming" value="gaming"><i class="icon-gaming"></i>Gaming</label><!--GAMING-->
+                    <label id="icon-headphones"><input type="radio" ng-model="searchCategory" name="category" id="musical" value="musical"><i class="icon-headphones"></i>Musical</label><!--MUSICAL-->
+                    <label id="icon-sport"><input type="radio" ng-model="searchCategory" name="category" id="sport" value="sport"><i class="icon-sport"></i>Sport</label><!--SPORT-->
+                    <label id="icon-weird"><input type="radio" ng-model="searchCategory" name="category" id="wtf!?" value="wtf!?"><i class="icon-weird"></i>WTF!?</label><!--WTF-->
                 </p>
             </div>
             <div class="button-search">
-                <input type="submit" value="Search" class="waves-effect waves-light btn">
+                <input type="button" value="Search" id="subSearch" class="waves-effect waves-light btn">
             </div>
         </form>
     </section>
@@ -153,7 +153,7 @@
       <section class="hot-challenge">
         <div class="wrapper">
           <h1>Recent <span>challenges</span></h1>
-          <a href="" ng-repeat="challenge in challenges | orderBy:'-date' | limitTo: 3">
+          <a href="" ng-repeat="challenge in challenges | orderBy:'-date' | filter:search | filter:searchCategory">
               <article>
                   <h2>{{ challenge.titre }} <span>challenge</span></h2>
                   <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
