@@ -15,7 +15,7 @@
         <ul>
             <li><a href="#" id="addadwit"><img src="../assets/img/svg/cancel.svg" alt="Add a dwit">Add a dwit</a></li>
             <li>
-                <a href="#"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a>
+                <a href="../"><img src="../assets/img/logo.png" alt="Logo de DWIT"></a>
                 <div></div>
             </li>
             <li>
@@ -92,40 +92,37 @@
     </div>
 </section>
 <!--End of Account Section-->
-    <section class="details-challenge">
+    <section class="details-challenge" ng-controller="DetailController">
         <div class="inner-details">
-            <h1>SUBWAY BAG <span>CHALLENGES</span></h1>
+            <h1> {{ details.titre }} <span>CHALLENGES</span></h1>
             <div class="wrapper-details">
                 <div class="photo-frame">
                     <figure>
                         <img src="../assets/img/image1.png" alt="Photo of challenge">
                     </figure>
-                    <div class="succeed">
+                    <div class="succeed" ng-click="addSuccess()">
                         <h2>Succeed</h2>
-                        <p>16 <i class="icon-like"></i></p>
+                        <p> {{ details.success }} <i class="icon-like"></i></p>
                     </div>
-                    <div class="failed">
+                    <div class="failed" ng-click="addFailed()">
                         <h2>Failed</h2>
-                        <p>62 <i class="icon-dislike"></i></p>
+                        <p> {{ details.failed }} <i class="icon-dislike"></i></p>
                     </div>
                 </div>
                 <div class="text-frame">
                     <div class="content-frame">
-                        <h2>Author: <span>Jean Bon</span></h2>
-                        <h2>Published on: <span>28/05/2016</span></h2>
-                        <h2>Category: <span><i class="icon-headphones-yellow"></i>Musical</span></h2>
+                        <h2>Author: <span>{{ details.author }}</span></h2>
+                        <h2>Published on: <span>{{ details.date | date: 'dd/MM/yyyy' }}</span></h2>
+                        <h2>Category: <span><i class="icon-headphones-yellow"></i>{{ details.name }}</span></h2>
                     </div>
                     <div class="buttons">
-                        <button class="btn waves-effect waves-light">I like it<i class="icon-heart"></i></button>
+                        <button class="btn waves-effect waves-light" ng-click="addLike()">I like it<i class="icon-heart"></i></button>
                         <button class="btn waves-effect waves-light">Share it <i class="icon-share"></i></button>
                     </div>
                 </div>
                 <div class="description-frame">
                     <h2>Description:</h2>
-                    <p>Minions ipsum uuuhhh underweaaar aaaaaah wiiiii wiiiii belloo!
-                        Bee do bee do bee do jeje jeje daa jiji poulet tikka masala hahaha.
-                        Poulet tikka masala tank yuuu! Ti aamoo!Aaaaaah gelatooo. Wiiiii ti aamoo!<br><br>
-                        Bappleees pepete gelatooo bananaaaa wiiiii tatata bala tu potatoooo tatata bala tu.</p>
+                    <p>{{ details.description }}</p>
                 </div>
         </div>
         </div>
@@ -182,6 +179,7 @@
 <script src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
 <script src="../bower_components/angular/angular.min.js"></script>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/controller/detailController.js" charset="utf-8"></script>
 <script src="../assets/js/scripts.js"></script>
 
 </body>

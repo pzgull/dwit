@@ -96,7 +96,7 @@
       <section class="hot-challenge">
         <div class="wrapper">
           <h1>Hot <span>Challenges</span></h1>
-          <a href="" ng-repeat="challenge in challenges | orderBy:'-like' | limitTo: 3">
+          <a href="/index.php?a=page&id={{ challenge.id }}" ng-repeat="challenge in challenges | orderBy:'-like' | limitTo: 3">
               <article>
                   <h2>{{ challenge.titre }} <span>challenge</span></h2>
                   <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
@@ -150,6 +150,7 @@
   <script src="../bower_components/Materialize/dist/js/materialize.min.js"></script>
   <script src="../bower_components/angular/angular.min.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/controller/challengeController.js" charset="utf-8"></script>
   <script src="../assets/js/scripts.js"></script>
 
 </body>

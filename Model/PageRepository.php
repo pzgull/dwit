@@ -129,7 +129,45 @@ class PageRepository
         }
 
         $stmt->execute();
-        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+        return $stmt->fetch();
+    }
+
+    public function addLikeAction($id, $element, $nb)
+    {
+        $sql = 'UPDATE
+                  `defi`
+              SET ';
+
+        switch ($element) {
+            case 'like':
+                $sql .= " `like` = :like";
+                break;
+            case 'success':
+                $sql .= " `success` = :success";
+                break;
+            case 'failed':
+                $sql .= " `failed` = :failed";
+                break;
+        }
+         $sql .= ' WHERE `id` = :id';
+
+        $stmt = $this->pdo->prepare($sql);
+
+        switch ($element) {
+            case 'like':
+                $stmt->bindParam(':like', $nb);
+                break;
+            case 'success':
+                $stmt->bindParam(':success', $nb);
+                break;
+            case 'failed':
+                $stmt->bindParam(':failed', $nb);
+                break;
+        }
+        $stmt->bindParam(':id', $id);
+
+        $stmt->execute();
+        return $stmt;
     }
 
     public function getIdCategory($category)
