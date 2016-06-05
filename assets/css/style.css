@@ -77,6 +77,8 @@ header > nav > ul > li:first-child a img {
 header>nav>ul>li:nth-child(2) a img {
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 /*RIGHT NAV*/
@@ -254,7 +256,7 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
     justify-content: space-between;
 }
 
-.details-challenge h1 {
+.details-challenge h1, .challengers h1 {
     margin-bottom: 100px;
 }
 
@@ -371,6 +373,7 @@ span>.icon-headphones-yellow:before {
     position: absolute;
     bottom: -30px;
     left: 50%;
+    transform: translate(-50%, 0);
 }
 
 /*SECTION CHALLENGERS*/
@@ -393,6 +396,19 @@ span>.icon-headphones-yellow:before {
     font: 16px Lato;
     color: #eaeaea;
     margin: 0 0 10px;
+}
+
+.challengers article img {
+    width: 600px;
+    height: auto;
+}
+
+.button-succeed {
+    left: 560px;
+}
+
+.button-failed {
+    left: 560px;
 }
 
 /*FOOTER*/
