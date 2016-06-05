@@ -25,6 +25,9 @@ class FrontController
             case 'connect':
                 $methodName = 'connectAction';
                 break;
+            case 'page':
+                $methodName = 'displayPage';
+                break;
             case 'details':
                 $methodName = 'details';
                 break;
@@ -32,13 +35,22 @@ class FrontController
                 $methodName = 'participation';
                 break;
             case 'like':
-                $methodName = 'getLike';
+                $methodName = 'addLike';
                 break;
             case 'success':
-                $methodName = 'getLike';
+                $methodName = 'addLike';
                 break;
             case 'failed':
-                $methodName = 'getLike';
+                $methodName = 'addLike';
+                break;
+            case 'getlike':
+                $methodName = 'getSuccess';
+                break;
+            case 'getsuccess':
+                $methodName = 'getSuccess';
+                break;
+            case 'getfailed':
+                $methodName = 'getSuccess';
                 break;
             case 'add':
                 $methodName = 'addChallenge';

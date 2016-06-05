@@ -1,32 +1,15 @@
 /*HEADER*/
 header {
     background: #263238;
-    box-shadow: 0 0 30px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     height: 80px;
     padding: 0 20px;
     position: relative;
-}
-
-:focus {
-    outline: none;
+    z-index: 3;
 }
 
 input, textarea{
     color:#fff;
-}
-
-/*ACCOUNT*/
-
-.account{
-    background-color: #263238;
-    display: none;
-    width: 430px;
-    height: 300px;
-    padding: 20px;
-    position: absolute;
-    right: 0;
-    z-index: 111;
-    border-radius: 0 0 0 5px;
 }
 
 /*NAV*/
@@ -49,32 +32,15 @@ header nav ul {
 
 header nav ul a:hover{
     background-color: transparent;
-}
-
-/*ADD A DWIT*/
-header > nav > ul > li:first-child {
-    padding-top: 20px;
-}
-
-header > nav > ul > li:first-child a img {
-    height: 22px;
-    width: 22px;
-    display: block;
-    margin: 0 auto 5px;
-    transform: rotate(45deg);
-}
-
-.add-dwit .btn {
-    margin-top: 40px;
-}
-
-.categories p {
-    margin-left: 10px;
+    color: #ffb300;
 }
 
 /*LOGO*/
 header>nav>ul>li:nth-child(2) a img {
-    margin-left: 200px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 /*RIGHT NAV*/
@@ -99,6 +65,15 @@ section {
     padding: 50px;
 }
 
+section.hot-challenge, section.details-challenge {
+    background: #e0e0e0;
+    position: relative;
+}
+
+section.challengers {
+    background: #ffffff;
+}
+
 section h1 {
     font: 30px Lato;
     text-transform: uppercase;
@@ -111,11 +86,147 @@ section h1 span {
     color: #ffb300;
 }
 
-/*SECTION HOT CHALLENGE*/
-section.hot-challenge {
-    background: #e0e0e0;
+/*ACCOUNT*/
+.account{
+    background-color: #263238;
+    display: none;
+    width: 430px;
+    height: 300px;
+    padding: 20px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    z-index: 1;
+    border-radius: 0 0 0 2px;
 }
 
+.account .btn {
+    border-radius: 0;
+}
+
+/*SECTION ADD A DWIT*/
+section.add-dwit {
+    background: #455a64;
+    display: none;
+}
+
+header > nav > ul > li:first-child {
+    padding-top: 20px;
+}
+
+header > nav > ul > li:first-child a img {
+    height: 22px;
+    width: 22px;
+    display: block;
+    margin: 0 auto 5px;
+    transform: rotate(45deg);
+}
+
+.add-dwit label {
+    text-transform: uppercase;
+}
+
+.yellow{
+    color: #ffb300;
+}
+
+.grey {
+    color: #9e9e9e;
+}
+
+section.add-dwit img {
+    width: 50px;
+    height: 50px;
+}
+
+section.add-dwit p {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-end;
+    color: #9e9e9e;
+    text-transform: uppercase;
+}
+
+input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #ffb300;
+    box-shadow: 0 1px 0 0 #ffb300;
+}
+
+input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
+    color: #ffb300;
+}
+
+.btn, .btn:focus, .btn:hover{
+    background-color: #ffb300;
+}
+
+.add-dwit .btn {
+    margin-top: 40px;
+    border-radius: 0;
+}
+
+.categories p {
+    margin-left: 10px;
+}
+
+input[type="submit"] {
+    font: 16px Lato;
+    letter-spacing: 1px;
+    color: #455a64;
+    font-weight: bold;
+}
+
+/*SEARCH*/
+.search {
+    display: none;
+    background: #455a64;
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    width: 100%;
+    box-shadow: 0 0 10px;
+}
+
+.search-frame {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search p {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: flex-end;
+    color: #9e9e9e;
+    text-transform: uppercase;
+}
+
+.sorted-by {
+    display: flex;
+    align-items: baseline;
+}
+
+.sorted-by p, .sorted-by label {
+    font: 14px Lato;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sorted-by p {
+    margin: 0 50px;
+}
+
+.search .btn {
+    margin-top: 40px;
+    border-radius: 0;
+}
+
+.button-search {
+    text-align: center;
+}
+
+/*SECTION HOT CHALLENGE*/
 section.hot-challenge .wrapper {
     text-align: center;
 }
@@ -196,45 +307,187 @@ section.hot-challenge .author-article h3 {
     margin: 0;
 }
 
-/*SECTION ADD A DWIT*/
-section.add-dwit {
-    background: #455a64;
-    display: none;
+/*SECTION DETAILS CHALLENGE ET CHALLENGER*/
+.inner-details {
+    width: 1280px;
+    margin: 0 auto;
 }
 
-.yellow{
-    color: #ffb300;
-}
-
-.grey {
-    color: #9e9e9e;
-}
-
-section.add-dwit img {
-    width: 50px;
-    height: 50px;
-}
-
-section.add-dwit p {
+.wrapper-details {
     display: flex;
     justify-content: space-between;
+}
+
+.details-challenge h1, .challengers h1 {
+    margin-bottom: 100px;
+}
+
+.succeed, .button-succeed {
+    display: inline-block;
+    background: #62b065;
     text-align: center;
-    align-items: flex-end;
-    color: #9e9e9e;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    padding: 5px;
+    cursor: pointer;
 }
 
-input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #ffb300;
-    box-shadow: 0 1px 0 0 #ffb300;
+.failed, .button-failed {
+    display: inline-block;
+    background: #d83834;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    width: 100px;
+    position: absolute;
+    top: 80px;
+    left: 310px;
+    padding: 5px;
+    cursor: pointer;
 }
 
-input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
-    color: #ffb300;
+.succeed h2, .button-succeed h2, .failed h2, .button-failed h2 {
+    color: #ffffff;
+    font: 12px Lato;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-.btn, .btn:focus, .btn:hover{
-    background-color: #ffb300;
+.succeed p, .button-succeed p, .failed p, .button-failed p {
+    display: inline-block;
+    font: 24px Lato;
+    color: #ffffff;
+    letter-spacing: 2px;
 }
+
+/*SECTION DETAILS CHALLENGE*/
+.details-challenge figure {
+    margin: 0;
+}
+.photo-frame {
+    position: relative;
+}
+
+.text-frame {
+    margin: 0 7%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: space-between;
+}
+
+.text-frame h2, .description-frame h2 {
+    margin: 0 0 40px 0;
+    font: 14px Lato;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-frame h2 span {
+    text-transform: capitalize;
+}
+
+span>.icon-headphones-yellow:before {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-frame button {
+    background-color: #263238;
+    box-shadow: 0 0 2px #000000;
+    width: 140px;
+    height: 40px;
+    border: 0;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.text-frame button:first-child {
+    margin: 0;
+}
+
+.buttons>button:hover, .buttons>button:focus {
+    background: #263238;
+}
+
+.description-frame p {
+    font: 14px Lato;
+    text-align: justify;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #e0e0e0;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+/*SECTION CHALLENGERS*/
+.challengers article {
+    position: relative;
+}
+
+.challenger-frame {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.challenger-frame h3, .challenger-frame p {
+    font: 16px Lato;
+    color: #eaeaea;
+    margin: 0 0 10px;
+}
+
+.challengers article img {
+    width: 600px;
+    height: auto;
+}
+
+.button-succeed {
+    left: 560px;
+}
+
+.button-failed {
+    left: 560px;
+}
+
+/*FOOTER*/
+footer nav {
+    background: #263238;
+    color: #eaeaea;
+    text-transform: uppercase;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 1px;
+}
+
 /*TYPOGRAPHIE*/
 /* SVG ICOFONT */
 @font-face {
@@ -336,6 +589,13 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 }
 .icon-dislike:before {
     content: "\e907";
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.icon-dislike-red:before {
+    content: "\e907";
     display: block;
     font-size: 20px;
     margin-top: 10px;
@@ -355,12 +615,20 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 }
 .icon-heart:before {
     content: "\e909";
-    display: block;
+    display: inline-block;
     font-size: 20px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin-left: 10px;
     color: #ff00ff;
 }
 .icon-like:before {
+    content: "\e90a";
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.icon-like-green:before {
     content: "\e90a";
     display: block;
     font-size: 20px;
@@ -396,4 +664,23 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 }
 .icon-share:before {
     content: "\e90f";
+    display: inline-block;
+    color: #42a5f5;
+    margin-left: 10px;
 }
+
+/***SELECTION***/
+::-moz-selection {
+    color: #ffb300;
+    background: #0a0a0a;
+}
+
+::selection {
+    color: #ffb300;
+    background: #0a0a0a;
+}
+
+:focus {
+    outline: none;
+}
+
