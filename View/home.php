@@ -153,7 +153,7 @@
       <section class="hot-challenge">
         <div class="wrapper">
           <h1>Recent <span>challenges</span></h1>
-          <a href="" ng-repeat="challenge in challenges | orderBy:'-date' | filter:search | filter:searchCategory">
+          <a href="/index.php?a=page&id={{ challenge.id }}" ng-repeat="challenge in challenges | orderBy:'-date' | filter:search | filter:searchCategory">
               <article>
                   <h2>{{ challenge.titre }} <span>challenge</span></h2>
                   <img ng-src="{{ challenge.img }}" alt="{{ challenge.title }}">
