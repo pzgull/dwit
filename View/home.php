@@ -2,7 +2,7 @@
 <html lang="en" ng-app="diwit">
 <head>
     <meta charset="UTF-8">
-    <title>DWIT</title>
+    <title>DWIT - Home</title>
     <!--Import materialize.css-->
     <link rel="stylesheet" href="../assets/css/reset.css">
     <link type="text/css" rel="stylesheet" href="../bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
@@ -107,8 +107,8 @@
                   <ul>
                       <li>
                           <ul>
-                              <li>{{ challenge.success }}<i class="icon-like"></i></li>
-                              <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                              <li>{{ challenge.success }}<i class="icon-like-green"></i></li>
+                              <li>{{ challenge.failed }}<i class="icon-dislike-red"></i></li>
                           </ul>
                       </li>
                       <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>
@@ -133,8 +133,8 @@
                   <ul>
                       <li>
                           <ul>
-                              <li>{{ challenge.success }}<i class="icon-like"></i></li>
-                              <li>{{ challenge.failed }}<i class="icon-dislike"></i></li>
+                              <li>{{ challenge.success }}<i class="icon-like-green"></i></li>
+                              <li>{{ challenge.failed }}<i class="icon-dislike-red"></i></li>
                           </ul>
                       </li>
                       <li>{{ challenge.name }}<i class="icon-headphones-orange"></i></li>

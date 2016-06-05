@@ -1,10 +1,11 @@
 /*HEADER*/
 header {
     background: #263238;
-    box-shadow: 0 0 30px 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     height: 80px;
     padding: 0 20px;
     position: relative;
+    z-index: 3;
 }
 
 :focus {
@@ -16,7 +17,6 @@ input, textarea{
 }
 
 /*ACCOUNT*/
-
 .account{
     background-color: #263238;
     display: none;
@@ -24,8 +24,9 @@ input, textarea{
     height: 300px;
     padding: 20px;
     position: absolute;
+    top: 80px;
     right: 0;
-    z-index: 111;
+    z-index: 1;
     border-radius: 0 0 0 5px;
 }
 
@@ -74,7 +75,8 @@ header > nav > ul > li:first-child a img {
 
 /*LOGO*/
 header>nav>ul>li:nth-child(2) a img {
-    margin-left: 200px;
+    position: absolute;
+    top: 0;
 }
 
 /*RIGHT NAV*/
@@ -99,6 +101,15 @@ section {
     padding: 50px;
 }
 
+section.hot-challenge, section.details-challenge {
+    background: #e0e0e0;
+    position: relative;
+}
+
+section.challengers {
+    background: #ffffff;
+}
+
 section h1 {
     font: 30px Lato;
     text-transform: uppercase;
@@ -112,10 +123,6 @@ section h1 span {
 }
 
 /*SECTION HOT CHALLENGE*/
-section.hot-challenge {
-    background: #e0e0e0;
-}
-
 section.hot-challenge .wrapper {
     text-align: center;
 }
@@ -235,6 +242,172 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 .btn, .btn:focus, .btn:hover{
     background-color: #ffb300;
 }
+
+/*SECTION DETAILS CHALLENGE ET CHALLENGER*/
+.inner-details {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.wrapper-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-challenge h1 {
+    margin-bottom: 100px;
+}
+
+.succeed, .button-succeed {
+    display: inline-block;
+    background: #62b065;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    width: 100px;
+    position: absolute;
+    top: 10px;
+    left: 310px;
+    padding: 5px;
+}
+
+.failed, .button-failed {
+    display: inline-block;
+    background: #d83834;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    width: 100px;
+    position: absolute;
+    top: 80px;
+    left: 310px;
+    padding: 5px;
+}
+
+.succeed h2, .button-succeed h2, .failed h2, .button-failed h2 {
+    color: #ffffff;
+    font: 12px Lato;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.succeed p, .button-succeed p, .failed p, .button-failed p {
+    display: inline-block;
+    font: 24px Lato;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+/*SECTION DETAILS CHALLENGE*/
+.details-challenge figure {
+    margin: 0;
+}
+.photo-frame {
+    position: relative;
+}
+
+.text-frame {
+    margin: 0 7%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: space-between;
+}
+
+.text-frame h2, .description-frame h2 {
+    margin: 0 0 40px 0;
+    font: 14px Lato;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-frame h2 span {
+    text-transform: capitalize;
+}
+
+span>.icon-headphones-yellow:before {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-frame button {
+    background-color: #263238;
+    box-shadow: 0 0 2px #000000;
+    width: 140px;
+    height: 40px;
+    border: 0;
+    color: #e0e0e0;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.text-frame button:first-child {
+    margin: 0;
+}
+
+.buttons>button:hover, .buttons>button:focus {
+    background: #263238;
+}
+
+.description-frame p {
+    font: 14px Lato;
+    text-align: justify;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #e0e0e0;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+}
+
+/*SECTION CHALLENGERS*/
+.challengers article {
+    position: relative;
+}
+
+.challenger-frame {
+    position: absolute;
+    background: rgba(0,0,0,0.7);
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.challenger-frame h3, .challenger-frame p {
+    font: 16px Lato;
+    color: #eaeaea;
+    margin: 0 0 10px;
+}
+
+/*FOOTER*/
+footer nav {
+    background: #263238;
+    color: #eaeaea;
+    text-transform: uppercase;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 1px;
+}
+
 /*TYPOGRAPHIE*/
 /* SVG ICOFONT */
 @font-face {
@@ -336,6 +509,13 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 }
 .icon-dislike:before {
     content: "\e907";
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.icon-dislike-red:before {
+    content: "\e907";
     display: block;
     font-size: 20px;
     margin-top: 10px;
@@ -355,12 +535,20 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 }
 .icon-heart:before {
     content: "\e909";
-    display: block;
+    display: inline-block;
     font-size: 20px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin-left: 10px;
     color: #ff00ff;
 }
 .icon-like:before {
+    content: "\e90a";
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+.icon-like-green:before {
     content: "\e90a";
     display: block;
     font-size: 20px;
@@ -396,4 +584,7 @@ input:not([type]):focus:not([readonly]) + label, input[type=text]:focus:not([rea
 }
 .icon-share:before {
     content: "\e90f";
+    display: inline-block;
+    color: #42a5f5;
+    margin-left: 10px;
 }
