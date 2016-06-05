@@ -2,8 +2,13 @@ $(document).ready(function(){
     $("#account").click(function(){
         $(".account").slideToggle('fast');
     });
+
     $("#addadwit").click(function(){
         $(".add-dwit").slideToggle('fast');
+    });
+
+    $("#search").click(function(){
+        $(".search").slideToggle('fast');
     });
 
     $("#icon-art").click(function(event){
